@@ -14,6 +14,7 @@ import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.client.methods.HttpUriRequest;
 import org.apache.http.client.methods.RequestBuilder;
+import org.apache.http.client.protocol.HttpClientContext;
 import org.apache.http.entity.ContentType;
 import org.apache.http.entity.FileEntity;
 import org.apache.http.entity.StringEntity;
@@ -46,7 +47,7 @@ public class RestApiHelper {
 		return performRequest(post);
 	}
 	
-	public static RestResponse performGetRequest(URI url, Map<String, String> headers)
+	public static RestResponse performGetRequest(URI url, Map<String, String> headers, HttpClientContext... context)
 	{
 		HttpGet get = new HttpGet(url);
 		System.out.println("Get Request url: ["+url+"]");
@@ -55,14 +56,28 @@ public class RestApiHelper {
 			get.setHeaders(getCustomHeaders(headers));
 		}
 		System.out.println("### Get Request Ends ###");
-		return performRequest(get);
+		if(context.length!=0)
+		{
+			return performRequest(get, context[0]);
+		}
+		else
+		{
+			return performRequest(get);
+		}
 	}
 	
-	public static RestResponse performGetRequest(String url, Map<String, String> headers)
+	public static RestResponse performGetRequest(String url, Map<String, String> headers, HttpClientContext... context)
 	{
 		System.out.println("### Get Request Starts ###");
 		try {
-			return performGetRequest(new URI(url), headers);
+			if(context.length!=0)
+			{
+				return performGetRequest(new URI(url), headers, context[0]);
+			}
+			else 
+			{
+				return performGetRequest(new URI(url), headers);
+			}
 		} catch (URISyntaxException e) {
 			throw new RuntimeException(e.getMessage(), e);
 		}
@@ -114,7 +129,28 @@ public class RestApiHelper {
 			}
 			throw new RuntimeException(e.getMessage(), e);
 		} 
-	}	
+	}
+	
+	private static RestResponse performRequest(HttpUriRequest method, HttpClientContext context)
+	{
+		CloseableHttpResponse response=null;
+		try(CloseableHttpClient client = HttpClientBuilder.create().build();)
+		{
+			response = client.execute(method, context);
+			ResponseHandler<String> body = new BasicResponseHandler();
+			RestResponse restResponse=new RestResponse(response.getStatusLine().getStatusCode(), body.handleResponse(response));
+			return restResponse;
+			//System.out.println(restResponse.toString());
+		}
+		catch(Exception e)
+		{
+			if(e instanceof HttpResponseException)
+			{
+				return new RestResponse(response.getStatusLine().getStatusCode(), e.getMessage());
+			}
+			throw new RuntimeException(e.getMessage(), e);
+		} 
+	}
 	
 	public static RestResponse performDeleteRequest(String url)
 	{

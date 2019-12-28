@@ -3,10 +3,11 @@
 <suite name="InputFormSuite">
   <test name="Test">
     <classes>
-     <!--  <class name="com.api.rest.api.helper.GetMethodTest"/> -->
+      <!-- <class name="com.api.rest.api.helper.GetMethodTest"/> -->
      <!-- <class name="com.api.rest.api.helper.PostMethodTest"/> -->
      <!-- <class name="com.api.rest.api.helper.DeleteMethodTest"/> -->
-     <class name="com.api.rest.api.helper.PutMethodTest"/>
+     <!-- <class name="com.api.rest.api.helper.PutMethodTest"/> -->
+     <class name="com.api.rest.api.helper.SSLRequestsTest"/>
     </classes>
   </test>
 </suite>

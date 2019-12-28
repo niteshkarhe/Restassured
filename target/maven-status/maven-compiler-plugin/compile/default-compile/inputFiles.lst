@@ -1,8 +1,10 @@
 D:\NK\API\API Projects\rest-api-helper\src\main\java\com\api\rest\api\helper\DeleteRequest.java
 D:\NK\API\API Projects\rest-api-helper\src\main\java\com\api\rest\api\util\JsonSchemaToPOJO.java
 D:\NK\API\API Projects\rest-api-helper\src\main\java\com\api\rest\api\util\SerializationOfXml.java
+D:\NK\API\API Projects\rest-api-helper\src\main\java\com\api\rest\api\helper\HttpsClientHelper.java
 D:\NK\API\API Projects\rest-api-helper\src\main\java\com\api\rest\api\xmlmodel\ApiXmlPost.java
 D:\NK\API\API Projects\rest-api-helper\src\main\java\com\api\rest\api\xmlmodel\Laptop.java
+D:\NK\API\API Projects\rest-api-helper\src\main\java\com\api\rest\api\helper\PromptAuth.java
 D:\NK\API\API Projects\rest-api-helper\src\main\java\com\api\rest\api\model\RestResponse.java
 D:\NK\API\API Projects\rest-api-helper\src\main\java\com\api\rest\api\util\ReadJsonAsString.java
 D:\NK\API\API Projects\rest-api-helper\src\main\java\com\api\rest\api\helper\PostRequest.java

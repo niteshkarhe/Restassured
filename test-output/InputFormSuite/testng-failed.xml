@@ -3,11 +3,11 @@
 <suite thread-count="-1" guice-stage="DEVELOPMENT" name="Failed suite [InputFormSuite]">
   <test name="Test(failed)">
     <classes>
-      <class name="com.api.rest.api.helper.PostMethodTest">
+      <class name="com.api.rest.api.helper.GetMethodTest">
         <methods>
-          <include name="testPostWithXml"/>
+          <include name="testGetFindWithId"/>
         </methods>
-      </class> <!-- com.api.rest.api.helper.PostMethodTest -->
+      </class> <!-- com.api.rest.api.helper.GetMethodTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [InputFormSuite] -->

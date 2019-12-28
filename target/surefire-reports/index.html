@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">2 methods,   2 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -102,7 +102,12 @@
                     <div class="method-list-content passed suite-InputFormSuite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-InputFormSuite" title="com.api.rest.api.helper.PutMethodTest" hash-for-method="testPutMethod">testPutMethod</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-InputFormSuite" title="com.api.rest.api.helper.SSLRequestsTest" hash-for-method="testGetAll">testGetAll</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-InputFormSuite" title="com.api.rest.api.helper.SSLRequestsTest" hash-for-method="testPost">testPost</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-InputFormSuite -->
@@ -120,14 +125,21 @@
           <div class="suite-InputFormSuite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">com.api.rest.api.helper.PutMethodTest</span>
+              <span class="class-name">com.api.rest.api.helper.SSLRequestsTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="testPutMethod">
-                  </a> <!-- testPutMethod -->
-                  <span class="method-name">testPutMethod</span>
+                  <a name="testGetAll">
+                  </a> <!-- testGetAll -->
+                  <span class="method-name">testGetAll</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testPost">
+                  </a> <!-- testPost -->
+                  <span class="method-name">testPost</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -144,7 +156,7 @@
 &lt;suite thread-count=&quot;-1&quot; guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot; name=&quot;InputFormSuite&quot;&gt;
   &lt;test verbose=&quot;0&quot; name=&quot;Test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.api.rest.api.helper.PutMethodTest&quot;/&gt;
+      &lt;class name=&quot;com.api.rest.api.helper.SSLRequestsTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test --&gt;
 &lt;/suite&gt; &lt;!-- InputFormSuite --&gt;
@@ -184,16 +196,20 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(2);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'testPutMethod')
-data.setCell(0, 2, 'com.api.rest.api.helper.PutMethodTest')
-data.setCell(0, 3, 13950);
+data.setCell(0, 1, 'testPost')
+data.setCell(0, 2, 'com.api.rest.api.helper.SSLRequestsTest')
+data.setCell(0, 3, 3695);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'testGetAll')
+data.setCell(1, 2, 'com.api.rest.api.helper.SSLRequestsTest')
+data.setCell(1, 3, 326);
 window.suiteTableData['InputFormSuite']= { tableData: data, tableDiv: 'times-div-InputFormSuite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 13 seconds</span>
+              <span class="suite-total-time">Total running time: 4 seconds</span>
               <div id="times-div-InputFormSuite">
               </div> <!-- times-div-InputFormSuite -->
             </div> <!-- times-div -->
@@ -219,10 +235,14 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.api.rest.api.helper.PutMethodTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.api.rest.api.helper.SSLRequestsTest</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <span class="method-name">testPutMethod</span>
+                <span class="method-name">testPost</span>
                 <span class="method-start">0 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testGetAll</span>
+                <span class="method-start">3699 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

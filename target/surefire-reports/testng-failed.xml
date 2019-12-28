@@ -3,11 +3,11 @@
 <suite thread-count="-1" guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [InputFormSuite]">
   <test verbose="0" name="Test(failed)">
     <classes>
-      <class name="com.api.rest.api.helper.PutMethodTest">
+      <class name="com.api.rest.api.helper.SSLRequestsTest">
         <methods>
-          <include name="testPutMethod"/>
+          <include name="testPost"/>
         </methods>
-      </class> <!-- com.api.rest.api.helper.PutMethodTest -->
+      </class> <!-- com.api.rest.api.helper.SSLRequestsTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [InputFormSuite] -->

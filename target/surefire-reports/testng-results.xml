@@ -1,17 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="InputFormSuite" duration-ms="13998" started-at="2019-12-27T22:11:08Z" finished-at="2019-12-27T22:11:22Z">
+  <suite name="InputFormSuite" duration-ms="4111" started-at="2019-12-28T21:37:14Z" finished-at="2019-12-28T21:37:18Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="13998" started-at="2019-12-27T22:11:08Z" finished-at="2019-12-27T22:11:22Z">
-      <class name="com.api.rest.api.helper.PutMethodTest">
-        <test-method status="PASS" signature="testPutMethod()[pri:0, instance:com.api.rest.api.helper.PutMethodTest@79b4d0f]" name="testPutMethod" duration-ms="13950" started-at="2019-12-28T03:41:08Z" finished-at="2019-12-28T03:41:22Z">
+    <test name="Test" duration-ms="4111" started-at="2019-12-28T21:37:14Z" finished-at="2019-12-28T21:37:18Z">
+      <class name="com.api.rest.api.helper.SSLRequestsTest">
+        <test-method status="PASS" signature="testPost()[pri:1, instance:com.api.rest.api.helper.SSLRequestsTest@79b4d0f]" name="testPost" duration-ms="3695" started-at="2019-12-29T03:07:14Z" finished-at="2019-12-29T03:07:18Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testPutMethod -->
-      </class> <!-- com.api.rest.api.helper.PutMethodTest -->
+        </test-method> <!-- testPost -->
+        <test-method status="PASS" signature="testGetAll()[pri:2, instance:com.api.rest.api.helper.SSLRequestsTest@79b4d0f]" name="testGetAll" duration-ms="326" started-at="2019-12-29T03:07:18Z" finished-at="2019-12-29T03:07:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetAll -->
+      </class> <!-- com.api.rest.api.helper.SSLRequestsTest -->
     </test> <!-- Test -->
   </suite> <!-- InputFormSuite -->
 </testng-results>
