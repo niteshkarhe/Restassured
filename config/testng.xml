@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="InputFormSuite">
+  <test name="Test">
+    <classes>
+     <!--  <class name="com.api.rest.api.helper.GetMethodTest"/> -->
+     <!-- <class name="com.api.rest.api.helper.PostMethodTest"/> -->
+     <!-- <class name="com.api.rest.api.helper.DeleteMethodTest"/> -->
+     <class name="com.api.rest.api.helper.PutMethodTest"/>
+    </classes>
+  </test>
+</suite>

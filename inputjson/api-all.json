@@ -1,0 +1,26 @@
+[
+    {
+        "BrandName": "Mac",
+        "Features": {
+            "Feature": [
+                "10GB RAM",
+                "17.5 inch screen",
+                "Solid Display"
+            ]
+        },
+        "Id": 126,
+        "LaptopName": "MAC Book"
+    },
+    {
+        "BrandName": "Lenevo",
+        "Features": {
+            "Feature": [
+                "7GB RAM",
+                "15 inch screen",
+                "Gorilla Glass"
+            ]
+        },
+        "Id": 127,
+        "LaptopName": "L Series"
+    }
+]

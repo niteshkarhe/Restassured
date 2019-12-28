@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="-1" guice-stage="DEVELOPMENT" name="Failed suite [InputFormSuite]">
+  <test name="Test(failed)">
+    <classes>
+      <class name="com.api.rest.api.helper.PostMethodTest">
+        <methods>
+          <include name="testPostWithXml"/>
+        </methods>
+      </class> <!-- com.api.rest.api.helper.PostMethodTest -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [InputFormSuite] -->
