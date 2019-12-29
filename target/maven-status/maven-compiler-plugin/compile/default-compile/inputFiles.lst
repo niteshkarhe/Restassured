@@ -3,6 +3,7 @@ D:\NK\API\API Projects\rest-api-helper\src\main\java\com\api\rest\api\util\JsonS
 D:\NK\API\API Projects\rest-api-helper\src\main\java\com\api\rest\api\util\SerializationOfXml.java
 D:\NK\API\API Projects\rest-api-helper\src\main\java\com\api\rest\api\helper\HttpsClientHelper.java
 D:\NK\API\API Projects\rest-api-helper\src\main\java\com\api\rest\api\xmlmodel\ApiXmlPost.java
+D:\NK\API\API Projects\rest-api-helper\src\main\java\com\api\rest\api\model\RequestStatus.java
 D:\NK\API\API Projects\rest-api-helper\src\main\java\com\api\rest\api\xmlmodel\Laptop.java
 D:\NK\API\API Projects\rest-api-helper\src\main\java\com\api\rest\api\helper\PromptAuth.java
 D:\NK\API\API Projects\rest-api-helper\src\main\java\com\api\rest\api\model\RestResponse.java
@@ -11,6 +12,7 @@ D:\NK\API\API Projects\rest-api-helper\src\main\java\com\api\rest\api\helper\Pos
 D:\NK\API\API Projects\rest-api-helper\src\main\java\com\api\rest\api\helper\RestApiHelper.java
 D:\NK\API\API Projects\rest-api-helper\src\main\java\com\api\rest\api\model\ApiAll.java
 D:\NK\API\API Projects\rest-api-helper\src\main\java\com\api\rest\api\helper\GetRequest.java
+D:\NK\API\API Projects\rest-api-helper\src\main\java\com\api\rest\api\helper\HttpAsyncClientHelper.java
 D:\NK\API\API Projects\rest-api-helper\src\main\java\com\api\rest\api\util\XmlToJson.java
 D:\NK\API\API Projects\rest-api-helper\src\main\java\com\api\rest\api\util\GenerateJsonPostData.java
 D:\NK\API\API Projects\rest-api-helper\src\main\java\com\api\rest\api\util\GenerateJsonPutData.java

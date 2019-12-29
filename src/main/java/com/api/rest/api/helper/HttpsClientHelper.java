@@ -109,7 +109,51 @@ public class HttpsClientHelper
 		}
 	}
 	
+	public static RestResponse performPutWithSSL(URI uri, Object content, ContentType type, Map<String, String> headers)
+	{
+		HttpUriRequest put  = RequestBuilder.put(uri).setEntity(getHttpEntity(content, type)).build();
+		if(headers!=null)
+		{
+			put.setHeaders(getCustomHeaders(headers));
+		}
+		return performRequest(put);
+	}
 	
+	public static RestResponse performPutWithSSL(String uri, Object content, ContentType type, Map<String, String> headers)
+	{
+		System.out.println("### Put SSL Request Starts ###");
+		try 
+		{
+			return performPutWithSSL(new URI(uri), content, type, headers);
+		} 
+		catch (URISyntaxException e) 
+		{
+			throw new RuntimeException(e.getMessage(), e);
+		}
+	}
+	
+	public static RestResponse performDeleteWithSSL(URI uri, Map<String, String> headers)
+	{
+		HttpUriRequest delete = RequestBuilder.delete(uri).build();
+		if(headers!=null)
+		{
+			delete.setHeaders(getCustomHeaders(headers));
+		}
+		return performRequest(delete);
+	}
+	
+	public static RestResponse performDeleteWithSSL(String uri, Map<String, String> headers)
+	{
+		System.out.println("### Delete SSL Request Starts ###");
+		try 
+		{
+			return performDeleteWithSSL(new URI(uri), headers);
+		} 
+		catch (URISyntaxException e) 
+		{
+			throw new RuntimeException(e.getMessage(), e);
+		}
+	}
 	
 	private static HttpEntity getHttpEntity(Object content, ContentType type)
 	{

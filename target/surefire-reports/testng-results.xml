@@ -1,21 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
   <reporter-output>
   </reporter-output>
-  <suite name="InputFormSuite" duration-ms="4111" started-at="2019-12-28T21:37:14Z" finished-at="2019-12-28T21:37:18Z">
+  <suite name="InputFormSuite" duration-ms="15902" started-at="2019-12-29T15:44:42Z" finished-at="2019-12-29T15:44:58Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="4111" started-at="2019-12-28T21:37:14Z" finished-at="2019-12-28T21:37:18Z">
-      <class name="com.api.rest.api.helper.SSLRequestsTest">
-        <test-method status="PASS" signature="testPost()[pri:1, instance:com.api.rest.api.helper.SSLRequestsTest@79b4d0f]" name="testPost" duration-ms="3695" started-at="2019-12-29T03:07:14Z" finished-at="2019-12-29T03:07:18Z">
+    <test name="Test" duration-ms="15902" started-at="2019-12-29T15:44:42Z" finished-at="2019-12-29T15:44:58Z">
+      <class name="com.api.rest.api.helper.AsyncRequestTest">
+        <test-method status="PASS" signature="testPostRequest()[pri:1, instance:com.api.rest.api.helper.AsyncRequestTest@2ed94a8b]" name="testPostRequest" duration-ms="3426" started-at="2019-12-29T21:14:42Z" finished-at="2019-12-29T21:14:46Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testPost -->
-        <test-method status="PASS" signature="testGetAll()[pri:2, instance:com.api.rest.api.helper.SSLRequestsTest@79b4d0f]" name="testGetAll" duration-ms="326" started-at="2019-12-29T03:07:18Z" finished-at="2019-12-29T03:07:18Z">
+        </test-method> <!-- testPostRequest -->
+        <test-method status="PASS" signature="testPutRequest()[pri:2, instance:com.api.rest.api.helper.AsyncRequestTest@2ed94a8b]" name="testPutRequest" duration-ms="10810" started-at="2019-12-29T21:14:46Z" finished-at="2019-12-29T21:14:57Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testGetAll -->
-      </class> <!-- com.api.rest.api.helper.SSLRequestsTest -->
+        </test-method> <!-- testPutRequest -->
+        <test-method status="PASS" signature="testGetRequest()[pri:3, instance:com.api.rest.api.helper.AsyncRequestTest@2ed94a8b]" name="testGetRequest" duration-ms="1255" started-at="2019-12-29T21:14:57Z" finished-at="2019-12-29T21:14:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetRequest -->
+        <test-method status="PASS" signature="testDelete()[pri:4, instance:com.api.rest.api.helper.AsyncRequestTest@2ed94a8b]" name="testDelete" duration-ms="331" started-at="2019-12-29T21:14:58Z" finished-at="2019-12-29T21:14:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDelete -->
+      </class> <!-- com.api.rest.api.helper.AsyncRequestTest -->
     </test> <!-- Test -->
   </suite> <!-- InputFormSuite -->
 </testng-results>

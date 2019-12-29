@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">4 methods,   4 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -102,12 +102,22 @@
                     <div class="method-list-content passed suite-InputFormSuite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-InputFormSuite" title="com.api.rest.api.helper.SSLRequestsTest" hash-for-method="testGetAll">testGetAll</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-InputFormSuite" title="com.api.rest.api.helper.AsyncRequestTest" hash-for-method="testDelete">testDelete</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-InputFormSuite" title="com.api.rest.api.helper.SSLRequestsTest" hash-for-method="testPost">testPost</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-InputFormSuite" title="com.api.rest.api.helper.AsyncRequestTest" hash-for-method="testGetRequest">testGetRequest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-InputFormSuite" title="com.api.rest.api.helper.AsyncRequestTest" hash-for-method="testPostRequest">testPostRequest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-InputFormSuite" title="com.api.rest.api.helper.AsyncRequestTest" hash-for-method="testPutRequest">testPutRequest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-InputFormSuite -->
@@ -125,21 +135,35 @@
           <div class="suite-InputFormSuite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">com.api.rest.api.helper.SSLRequestsTest</span>
+              <span class="class-name">com.api.rest.api.helper.AsyncRequestTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="testGetAll">
-                  </a> <!-- testGetAll -->
-                  <span class="method-name">testGetAll</span>
+                  <a name="testDelete">
+                  </a> <!-- testDelete -->
+                  <span class="method-name">testDelete</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="testPost">
-                  </a> <!-- testPost -->
-                  <span class="method-name">testPost</span>
+                  <a name="testGetRequest">
+                  </a> <!-- testGetRequest -->
+                  <span class="method-name">testGetRequest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testPostRequest">
+                  </a> <!-- testPostRequest -->
+                  <span class="method-name">testPostRequest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testPutRequest">
+                  </a> <!-- testPutRequest -->
+                  <span class="method-name">testPutRequest</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -156,7 +180,7 @@
 &lt;suite thread-count=&quot;-1&quot; guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot; name=&quot;InputFormSuite&quot;&gt;
   &lt;test verbose=&quot;0&quot; name=&quot;Test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.api.rest.api.helper.SSLRequestsTest&quot;/&gt;
+      &lt;class name=&quot;com.api.rest.api.helper.AsyncRequestTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test --&gt;
 &lt;/suite&gt; &lt;!-- InputFormSuite --&gt;
@@ -196,20 +220,28 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(4);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'testPost')
-data.setCell(0, 2, 'com.api.rest.api.helper.SSLRequestsTest')
-data.setCell(0, 3, 3695);
+data.setCell(0, 1, 'testPutRequest')
+data.setCell(0, 2, 'com.api.rest.api.helper.AsyncRequestTest')
+data.setCell(0, 3, 10810);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'testGetAll')
-data.setCell(1, 2, 'com.api.rest.api.helper.SSLRequestsTest')
-data.setCell(1, 3, 326);
+data.setCell(1, 1, 'testPostRequest')
+data.setCell(1, 2, 'com.api.rest.api.helper.AsyncRequestTest')
+data.setCell(1, 3, 3426);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'testGetRequest')
+data.setCell(2, 2, 'com.api.rest.api.helper.AsyncRequestTest')
+data.setCell(2, 3, 1255);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'testDelete')
+data.setCell(3, 2, 'com.api.rest.api.helper.AsyncRequestTest')
+data.setCell(3, 3, 331);
 window.suiteTableData['InputFormSuite']= { tableData: data, tableDiv: 'times-div-InputFormSuite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 4 seconds</span>
+              <span class="suite-total-time">Total running time: 15 seconds</span>
               <div id="times-div-InputFormSuite">
               </div> <!-- times-div-InputFormSuite -->
             </div> <!-- times-div -->
@@ -235,14 +267,22 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.api.rest.api.helper.SSLRequestsTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.api.rest.api.helper.AsyncRequestTest</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <span class="method-name">testPost</span>
+                <span class="method-name">testPostRequest</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">testGetAll</span>
-                <span class="method-start">3699 ms</span>
+                <span class="method-name">testPutRequest</span>
+                <span class="method-start">3434 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testGetRequest</span>
+                <span class="method-start">14248 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testDelete</span>
+                <span class="method-start">15507 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

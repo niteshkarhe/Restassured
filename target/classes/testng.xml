@@ -7,7 +7,8 @@
      <!-- <class name="com.api.rest.api.helper.PostMethodTest"/> -->
      <!-- <class name="com.api.rest.api.helper.DeleteMethodTest"/> -->
      <!-- <class name="com.api.rest.api.helper.PutMethodTest"/> -->
-     <class name="com.api.rest.api.helper.SSLRequestsTest"/>
+     <!-- <class name="com.api.rest.api.helper.SSLRequestsTest"/> -->
+     <class name="com.api.rest.api.helper.AsyncRequestTest"/>
     </classes>
   </test>
 </suite>
