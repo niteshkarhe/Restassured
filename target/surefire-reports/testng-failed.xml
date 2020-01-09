@@ -3,11 +3,12 @@
 <suite thread-count="-1" guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [InputFormSuite]">
   <test verbose="0" name="Test(failed)">
     <classes>
-      <class name="com.api.rest.api.helper.AsyncRequestTest">
+      <class name="com.api.rest.api.restassuredtest.GetMethodTest">
         <methods>
-          <include name="testDelete"/>
+          <include name="testPostData"/>
+          <include name="testGetNonExistantId"/>
         </methods>
-      </class> <!-- com.api.rest.api.helper.AsyncRequestTest -->
+      </class> <!-- com.api.rest.api.restassuredtest.GetMethodTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [InputFormSuite] -->

@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-InputFormSuite">
-              <span class="suite-name border-passed">InputFormSuite</span>
+              <span class="suite-name border-failed">InputFormSuite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -91,7 +91,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">4 methods,   4 passed</span>
+                    <span class="method-stats">5 methods, 1 failed,   4 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-InputFormSuite" class="hide-methods failed suite-InputFormSuite"> (hide)</a> <!-- hide-methods failed suite-InputFormSuite -->
+                      <a href="#" panel-name="suite-InputFormSuite" class="show-methods failed suite-InputFormSuite"> (show)</a> <!-- show-methods failed suite-InputFormSuite -->
+                    </span>
+                    <div class="method-list-content failed suite-InputFormSuite">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-InputFormSuite" title="com.api.rest.api.restassuredtest.GetMethodTest" hash-for-method="testGetNonExistantId">testGetNonExistantId</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-InputFormSuite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -102,22 +116,22 @@
                     <div class="method-list-content passed suite-InputFormSuite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-InputFormSuite" title="com.api.rest.api.helper.AsyncRequestTest" hash-for-method="testDelete">testDelete</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-InputFormSuite" title="com.api.rest.api.restassuredtest.GetMethodTest" hash-for-method="testGet">testGet</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-InputFormSuite" title="com.api.rest.api.helper.AsyncRequestTest" hash-for-method="testGetRequest">testGetRequest</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-InputFormSuite" title="com.api.rest.api.restassuredtest.GetMethodTest" hash-for-method="testGetId">testGetId</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-InputFormSuite" title="com.api.rest.api.helper.AsyncRequestTest" hash-for-method="testPostRequest">testPostRequest</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-InputFormSuite" title="com.api.rest.api.restassuredtest.GetMethodTest" hash-for-method="testStatusCode">testStatusCode</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-InputFormSuite" title="com.api.rest.api.helper.AsyncRequestTest" hash-for-method="testPutRequest">testPutRequest</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-InputFormSuite" title="com.api.rest.api.restassuredtest.GetMethodTest" hash-for-method="testStatusCodeWithThen">testStatusCodeWithThen</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-InputFormSuite -->
@@ -132,38 +146,86 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-InputFormSuite" class="panel InputFormSuite">
-          <div class="suite-InputFormSuite-class-passed">
+          <div class="suite-InputFormSuite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">com.api.rest.api.helper.AsyncRequestTest</span>
+              <img src="failed.png"/>
+              <span class="class-name">com.api.rest.api.restassuredtest.GetMethodTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="testDelete">
-                  </a> <!-- testDelete -->
-                  <span class="method-name">testDelete</span>
+                  <a name="testGetNonExistantId">
+                  </a> <!-- testGetNonExistantId -->
+                  <span class="method-name">testGetNonExistantId</span>
+                  <div class="stack-trace">java.lang.AssertionError: 1 expectation failed.
+Expected status code &lt;200&gt; but was &lt;404&gt;.
+
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:84)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:59)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:237)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:249)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:493)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:190)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.call(PogoMetaMethodSite.java:70)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:127)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:671)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:190)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:58)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:168)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:126)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:190)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:58)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:168)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:134)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+	at io.restassured.internal.ValidatableResponseImpl.super$2$statusCode(ValidatableResponseImpl.groovy)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1217)
+	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.invokeMethodOnSuperN(ScriptBytecodeAdapter.java:144)
+	at io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy:142)
+	at io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy)
+	at com.api.rest.api.restassuredtest.GetMethodTest.testGetNonExistantId(GetMethodTest.java:152)
+... Removed 57 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-InputFormSuite-class-failed -->
+          <div class="suite-InputFormSuite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.api.rest.api.restassuredtest.GetMethodTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testGet">
+                  </a> <!-- testGet -->
+                  <span class="method-name">testGet</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="testGetRequest">
-                  </a> <!-- testGetRequest -->
-                  <span class="method-name">testGetRequest</span>
+                  <a name="testGetId">
+                  </a> <!-- testGetId -->
+                  <span class="method-name">testGetId</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="testPostRequest">
-                  </a> <!-- testPostRequest -->
-                  <span class="method-name">testPostRequest</span>
+                  <a name="testStatusCode">
+                  </a> <!-- testStatusCode -->
+                  <span class="method-name">testStatusCode</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="testPutRequest">
-                  </a> <!-- testPutRequest -->
-                  <span class="method-name">testPutRequest</span>
+                  <a name="testStatusCodeWithThen">
+                  </a> <!-- testStatusCodeWithThen -->
+                  <span class="method-name">testStatusCodeWithThen</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -180,7 +242,7 @@
 &lt;suite thread-count=&quot;-1&quot; guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot; name=&quot;InputFormSuite&quot;&gt;
   &lt;test verbose=&quot;0&quot; name=&quot;Test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.api.rest.api.helper.AsyncRequestTest&quot;/&gt;
+      &lt;class name=&quot;com.api.rest.api.restassuredtest.GetMethodTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test --&gt;
 &lt;/suite&gt; &lt;!-- InputFormSuite --&gt;
@@ -220,28 +282,32 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(4);
+data.addRows(5);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'testPutRequest')
-data.setCell(0, 2, 'com.api.rest.api.helper.AsyncRequestTest')
-data.setCell(0, 3, 10810);
+data.setCell(0, 1, 'testGet')
+data.setCell(0, 2, 'com.api.rest.api.restassuredtest.GetMethodTest')
+data.setCell(0, 3, 1956);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'testPostRequest')
-data.setCell(1, 2, 'com.api.rest.api.helper.AsyncRequestTest')
-data.setCell(1, 3, 3426);
+data.setCell(1, 1, 'testGetNonExistantId')
+data.setCell(1, 2, 'com.api.rest.api.restassuredtest.GetMethodTest')
+data.setCell(1, 3, 250);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'testGetRequest')
-data.setCell(2, 2, 'com.api.rest.api.helper.AsyncRequestTest')
-data.setCell(2, 3, 1255);
+data.setCell(2, 1, 'testGetId')
+data.setCell(2, 2, 'com.api.rest.api.restassuredtest.GetMethodTest')
+data.setCell(2, 3, 173);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'testDelete')
-data.setCell(3, 2, 'com.api.rest.api.helper.AsyncRequestTest')
-data.setCell(3, 3, 331);
+data.setCell(3, 1, 'testStatusCode')
+data.setCell(3, 2, 'com.api.rest.api.restassuredtest.GetMethodTest')
+data.setCell(3, 3, 79);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'testStatusCodeWithThen')
+data.setCell(4, 2, 'com.api.rest.api.restassuredtest.GetMethodTest')
+data.setCell(4, 3, 46);
 window.suiteTableData['InputFormSuite']= { tableData: data, tableDiv: 'times-div-InputFormSuite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 15 seconds</span>
+              <span class="suite-total-time">Total running time: 2 seconds</span>
               <div id="times-div-InputFormSuite">
               </div> <!-- times-div-InputFormSuite -->
             </div> <!-- times-div -->
@@ -267,22 +333,32 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.api.rest.api.helper.AsyncRequestTest</div> <!-- chronological-class-name -->
-              <div class="test-method">
-                <span class="method-name">testPostRequest</span>
+              <div class="chronological-class-name">com.api.rest.api.restassuredtest.GetMethodTest</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">testPostData</span>
                 <span class="method-start">0 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">testGet</span>
+                <span class="method-start">1053 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">testPutRequest</span>
-                <span class="method-start">3434 ms</span>
+                <span class="method-name">testGetId</span>
+                <span class="method-start">3030 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">testGetRequest</span>
-                <span class="method-start">14248 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">testGetNonExistantId</span>
+                <span class="method-start">3203 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">testDelete</span>
-                <span class="method-start">15507 ms</span>
+                <span class="method-name">testStatusCode</span>
+                <span class="method-start">3468 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testStatusCodeWithThen</span>
+                <span class="method-start">3547 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

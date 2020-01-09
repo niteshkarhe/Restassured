@@ -30,7 +30,15 @@ public class RestApiHelper {
 	public static RestResponse performPostRequest(String url, Object content, ContentType type, Map<String, String> headers)
 	{
 		try {
-			return performPostRequest(new URI(url), content, type, headers);
+			if(content==null)
+			{
+				return performPostRequest(new URI(url), ContentType.APPLICATION_JSON, type, headers);
+			}
+			else
+			{
+				return performPostRequest(new URI(url),content, type, headers);
+			}
+			
 		} catch (URISyntaxException e) {
 			throw new RuntimeException(e.getMessage(), e);
 		}

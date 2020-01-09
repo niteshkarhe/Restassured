@@ -2,16 +2,20 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="InputFormSuite" duration-ms="5004" started-at="2019-12-28T12:07:05Z" finished-at="2019-12-28T12:07:10Z">
+  <suite name="Default suite" duration-ms="12734" started-at="2020-01-09T05:29:36Z" finished-at="2020-01-09T05:29:48Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="5004" started-at="2019-12-28T12:07:05Z" finished-at="2019-12-28T12:07:10Z">
-      <class name="com.api.rest.api.helper.SSLRequestsTest">
-        <test-method status="PASS" signature="testGetAll()[pri:1, instance:com.api.rest.api.helper.SSLRequestsTest@55f3ddb1]" name="testGetAll" duration-ms="4957" started-at="2019-12-28T17:37:05Z" finished-at="2019-12-28T17:37:10Z">
+    <test name="Default test" duration-ms="12734" started-at="2020-01-09T05:29:36Z" finished-at="2020-01-09T05:29:48Z">
+      <class name="com.api.rest.api.restassuredtest.TestQueryParameter">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.api.rest.api.restassuredtest.TestQueryParameter@385e9564]" name="setUp" is-config="true" duration-ms="16" started-at="2020-01-09T10:59:36Z" finished-at="2020-01-09T10:59:36Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testGetAll -->
-      </class> <!-- com.api.rest.api.helper.SSLRequestsTest -->
-    </test> <!-- Test -->
-  </suite> <!-- InputFormSuite -->
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="testQueryPara()[pri:0, instance:com.api.rest.api.restassuredtest.TestQueryParameter@385e9564]" name="testQueryPara" duration-ms="12683" started-at="2020-01-09T10:59:36Z" finished-at="2020-01-09T10:59:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testQueryPara -->
+      </class> <!-- com.api.rest.api.restassuredtest.TestQueryParameter -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>
