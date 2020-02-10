@@ -1,5 +1,7 @@
 package com.api.rest.api.helper;
 import java.io.File;
+import java.io.IOException;
+import java.util.Arrays;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
@@ -25,7 +27,7 @@ public class GetRequest {
 	//Step 3: Execute Http method using client
 	//Step 4: Catch the response of execution
 	//Step 5: Display response at console
-	public static void main(String[] args) {
+	public static void main(String[] args) throws UnsupportedOperationException, IOException {
 		/*HttpGet get = new HttpGet("http://localhost:8080/laptop-bag/webapi/api/ping/hello");
 		try(CloseableHttpClient client = HttpClientBuilder.create().build();
 				CloseableHttpResponse response = client.execute(get)) 
@@ -46,6 +48,27 @@ public class GetRequest {
 			e.printStackTrace();
 		}*/
 		RestResponse response = RestApiHelper.performGetRequest("http://localhost:8080/laptop-bag/webapi/api/ping/hello", null);
+		CloseableHttpResponse resp = response.getCloseableResponse();
 		System.out.println(response.toString());
+		System.out.println("resp.containsHeader(Content-Type: text/plain): "+resp.containsHeader("Content-Type"));
+		System.out.println("resp.getAllHeaders(): "+Arrays.toString(resp.getAllHeaders()));
+		System.out.println("resp.getEntity(): "+resp.getEntity());
+		System.out.println(String.format("resp.getEntity().getContentLength(): %1$s, resp.getEntity().getContentEncoding(): %2$s",resp.getEntity().getContentLength(), resp.getEntity().getContentEncoding()));
+		System.out.println("resp.getFirstHeader(\"Date\") returns first header that matches: "+resp.getFirstHeader("Date"));
+		System.out.println("resp.getHeaders(\"Content-Length\") returns all headers with specified name: "+Arrays.toString(resp.getHeaders("Content-Length")));
+		System.out.println("resp.getLastHeader(\"Server\") returns last header that matches: "+resp.getLastHeader("Server"));
+		System.out.println("resp.getLocale(). Locale is used to determine the reason phrase for the status code: "+resp.getLocale());
+		System.out.println(String.format("resp.getLocale().getDisplayCountry(): %1$s, "
+				+ "		\nresp.getLocale().getDisplayLanguage(): %2$s,"
+				+ "		\nresp.getLocale().getCountry(): %3$s, "
+				+ "\nresp.getLocale().getScript(): %4$s",
+				resp.getLocale().getDisplayCountry(), resp.getLocale().getDisplayLanguage(), resp.getLocale().getCountry(), resp.getLocale().getScript()));
+		System.out.println("resp.getProtocolVersion(): "+resp.getProtocolVersion());
+		System.out.println("resp.getStatusLine(): "+resp.getStatusLine());
+		System.out.println("resp.getStatusLine().getStatusCode(): "+resp.getStatusLine().getStatusCode());
+		System.out.println("resp.getStatusLine().getReasonPhrase(): "+resp.getStatusLine().getReasonPhrase());
+		System.out.println("resp.getStatusLine().getProtocolVersion(): "+resp.getStatusLine().getProtocolVersion());
+		resp.setStatusCode(400);
+		System.out.println("resp.getStatusLine().getStatusCode(): "+resp.getStatusLine().getStatusCode());
 	}
 }

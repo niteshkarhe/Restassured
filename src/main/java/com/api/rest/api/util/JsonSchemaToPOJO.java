@@ -21,7 +21,7 @@ public class JsonSchemaToPOJO {
 	{
 		String packageName="com.api.rest.api.model";  
         File inputJson= new File("D:\\NK\\API\\API Projects\\rest-api-helper\\inputjson\\api-all.json");  
-        File outputPojoDirectory=new File("D:\\NK\\API\\API Projects\\rest-api-helper\\src\\main\\java");  
+        File outputPojoDirectory=new File("D:\\NK\\API\\APIProjects\\RestApiHelper\\src\\main\\java");  
         outputPojoDirectory.mkdirs();  
         try {  
              new JsonSchemaToPOJO().convert2JSON(inputJson.toURI().toURL(), outputPojoDirectory, packageName, inputJson.getName().replace(".json", ""));  

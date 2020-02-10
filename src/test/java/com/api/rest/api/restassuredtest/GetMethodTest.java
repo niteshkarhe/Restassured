@@ -91,7 +91,7 @@ public class GetMethodTest extends BaseClass
 		}
 	}
 	
-	@Test(priority=2)
+	/*@Test(priority=2)
 	public void testStatusCode()
 	{
 		System.out.println("### Simple Get Method to validate Status Code ###");
@@ -228,7 +228,7 @@ public class GetMethodTest extends BaseClass
 		.get("/find/"+id)
 		.then()
 		.body("Features.Feature", hasSize(3));	
-		/* hasItem(), hasItems(), hasSize()*/
+		 hasItem(), hasItems(), hasSize()
 	}
 	
 	@Test(priority=8)
@@ -243,10 +243,10 @@ public class GetMethodTest extends BaseClass
 				.asString();
 		
 		System.out.println("Xml Content: "+xml);
-		/*To check content at path
+		To check content at path
 		 Laptop.BrandName
 		 Laptop.LaptopName
-		 */
+		 
 	}
 	
 	@Test(priority=9)
@@ -261,10 +261,10 @@ public class GetMethodTest extends BaseClass
 				.assertThat()
 				.body("Laptop.BrandName", equalTo(brandname), "Laptop.Id", equalTo(id), "Laptop.LaptopName", equalTo(laptopname));
 				
-		/*To check content at path
+		To check content at path
 		 Laptop.BrandName
 		 Laptop.LaptopName
-		 */
+		 
 	}
 	
 	@Test(priority=10)
@@ -284,7 +284,7 @@ public class GetMethodTest extends BaseClass
 		System.out.println("Laptop BrandName: "+xml.getString("Laptop.BrandName"));
 		System.out.println("Laptop LaptopName: "+xml.getString("Laptop.LaptopName"));
 		
-		/*Method to get data from list*/
+		Method to get data from list
 		List<String> featureLst = xml.getList("Laptop.Features.Feature");
 		System.out.println("Feature List: ");
 		for(String str: featureLst)
@@ -298,9 +298,9 @@ public class GetMethodTest extends BaseClass
 
 		//xml.getList("Laptop.Features.Feature").contains("feature_name")
 		
-		/*To check content at path
+		To check content at path
 		 Laptop.BrandName
-		 Laptop.LaptopName*/
+		 Laptop.LaptopName
 	}
 	
 	@Test(priority=11)
@@ -320,7 +320,7 @@ public class GetMethodTest extends BaseClass
 		System.out.println("Laptop BrandName: "+json.getString("BrandName"));
 		System.out.println("Laptop LaptopName: "+json.getString("LaptopName"));
 		
-		/*Method to get data from list*/
+		Method to get data from list
 		List<String> featureLst = json.getList("Features.Feature");
 		System.out.println("Feature List: ");
 		for(String str: featureLst)
@@ -331,5 +331,5 @@ public class GetMethodTest extends BaseClass
 		Assert.assertEquals(new Integer(id).intValue(), json.getInt("Id"));
 		Assert.assertEquals(brandname, json.getString("BrandName"));
 		Assert.assertEquals(laptopname, json.getString("LaptopName"));
-	}
+	}*/
 }

@@ -189,14 +189,14 @@ public class HttpsClientHelper
 		{
 			response = client.execute(method);
 			ResponseHandler<String> handler = new BasicResponseHandler();
-			RestResponse restResponse=new RestResponse(response.getStatusLine().getStatusCode(), handler.handleResponse(response));
+			RestResponse restResponse=new RestResponse(response.getStatusLine().getStatusCode(), handler.handleResponse(response), response);
 			return restResponse;
 		}
 		catch(Exception e)
 		{
 			if(e instanceof HttpResponseException)
 			{
-				return new RestResponse(response.getStatusLine().getStatusCode(), e.getMessage());
+				return new RestResponse(response.getStatusLine().getStatusCode(), e.getMessage(), response);
 			}
 			throw new RuntimeException(e.getMessage(), e);
 		}

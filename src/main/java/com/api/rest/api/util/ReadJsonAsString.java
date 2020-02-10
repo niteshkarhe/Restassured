@@ -18,12 +18,12 @@ public class ReadJsonAsString
 			if(object.isInstance(new GenerateJsonPostData()))
 			{
 				new GenerateJsonPostData().GenerateJsonData();
-				obj= parser.parse(new FileReader("D:\\NK\\API\\API Projects\\rest-api-helper\\inputjson\\api-post.json"));
+				obj= parser.parse(new FileReader("D:\\NK\\API\\APIProjects\\RestApiHelper\\inputjson\\api-post.json"));
 			}
 			else if(object.isInstance(new GenerateJsonPutData()))
 			{
 				new GenerateJsonPutData().GenerateJsonData(Id[0]);
-				obj= parser.parse(new FileReader("D:\\NK\\API\\API Projects\\rest-api-helper\\inputjson\\api-put.json"));
+				obj= parser.parse(new FileReader("D:\\NK\\API\\APIProjects\\RestApiHelper\\inputjson\\api-put.json"));
 			}
 			String json="";
 			JSONObject jsonObject = (JSONObject) obj;

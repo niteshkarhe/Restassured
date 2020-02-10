@@ -125,7 +125,7 @@ public class RestApiHelper {
 		{
 			response = client.execute(method);
 			ResponseHandler<String> body = new BasicResponseHandler();
-			RestResponse restResponse=new RestResponse(response.getStatusLine().getStatusCode(), body.handleResponse(response));
+			RestResponse restResponse=new RestResponse(response.getStatusLine().getStatusCode(), body.handleResponse(response), response);
 			return restResponse;
 			//System.out.println(restResponse.toString());
 		}
@@ -133,7 +133,7 @@ public class RestApiHelper {
 		{
 			if(e instanceof HttpResponseException)
 			{
-				return new RestResponse(response.getStatusLine().getStatusCode(), e.getMessage());
+				return new RestResponse(response.getStatusLine().getStatusCode(), e.getMessage(), response);
 			}
 			throw new RuntimeException(e.getMessage(), e);
 		} 
@@ -146,7 +146,7 @@ public class RestApiHelper {
 		{
 			response = client.execute(method, context);
 			ResponseHandler<String> body = new BasicResponseHandler();
-			RestResponse restResponse=new RestResponse(response.getStatusLine().getStatusCode(), body.handleResponse(response));
+			RestResponse restResponse=new RestResponse(response.getStatusLine().getStatusCode(), body.handleResponse(response), response);
 			return restResponse;
 			//System.out.println(restResponse.toString());
 		}
@@ -154,7 +154,7 @@ public class RestApiHelper {
 		{
 			if(e instanceof HttpResponseException)
 			{
-				return new RestResponse(response.getStatusLine().getStatusCode(), e.getMessage());
+				return new RestResponse(response.getStatusLine().getStatusCode(), e.getMessage(), response);
 			}
 			throw new RuntimeException(e.getMessage(), e);
 		} 

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="2.039074">
+<testcase classname="Get Request test cases" name="Get request to find given id" time="2.039074">
+<system-out><![CDATA[Given the data is posted to the server......................................passed
+Given "Accept" and "application/json" header are captured...................passed
+When get request with id is invoked.........................................passed
+Then verify status code '200'...............................................passed
+Then verify status phrase "OK"..............................................passed
+]]></system-out>
+</testcase>
+</testsuite>

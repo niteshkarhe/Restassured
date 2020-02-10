@@ -80,7 +80,7 @@ public class GenerateJsonPostData {
 		
 		lapDetails.put("Features", features);
 		
-		try(FileWriter file = new FileWriter("D:\\NK\\API\\API Projects\\rest-api-helper\\inputjson\\api-post.json"))
+		try(FileWriter file = new FileWriter("D:\\NK\\API\\APIProjects\\RestApiHelper\\inputjson\\api-post.json"))
 		{
 			file.write(lapDetails.toJSONString());
 			System.out.println("Json details: "+lapDetails.toJSONString());

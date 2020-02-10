@@ -38,7 +38,7 @@ public class PutRequest
 		{
 			response=client.execute(put);
 			ResponseHandler<String> handler = new BasicResponseHandler();
-			RestResponse restResponse=new RestResponse(response.getStatusLine().getStatusCode(), handler.handleResponse(response));
+			RestResponse restResponse=new RestResponse(response.getStatusLine().getStatusCode(), handler.handleResponse(response), response);
 			System.out.println("Response code: "+restResponse.getStatusCode());
 			System.out.println("Response body: "+restResponse.getResponseBody());
 			System.out.println("### Put Request Ends ###");

@@ -2,20 +2,24 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="12734" started-at="2020-01-09T05:29:36Z" finished-at="2020-01-09T05:29:48Z">
+  <suite name="Default suite" duration-ms="12062" started-at="2020-02-05T00:05:49Z" finished-at="2020-02-05T00:06:01Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="12734" started-at="2020-01-09T05:29:36Z" finished-at="2020-01-09T05:29:48Z">
-      <class name="com.api.rest.api.restassuredtest.TestQueryParameter">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.api.rest.api.restassuredtest.TestQueryParameter@385e9564]" name="setUp" is-config="true" duration-ms="16" started-at="2020-01-09T10:59:36Z" finished-at="2020-01-09T10:59:36Z">
+    <test name="Default test" duration-ms="12062" started-at="2020-02-05T00:05:49Z" finished-at="2020-02-05T00:06:01Z">
+      <class name="com.api.rest.api.restassuredtest.GetMethodTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.api.rest.api.restassuredtest.GetMethodTest@5b94b04d]" name="setUp" is-config="true" duration-ms="26" started-at="2020-02-05T05:35:49Z" finished-at="2020-02-05T05:35:49Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="testQueryPara()[pri:0, instance:com.api.rest.api.restassuredtest.TestQueryParameter@385e9564]" name="testQueryPara" duration-ms="12683" started-at="2020-01-09T10:59:36Z" finished-at="2020-01-09T10:59:48Z">
+        <test-method status="PASS" signature="testPostData()[pri:0, instance:com.api.rest.api.restassuredtest.GetMethodTest@5b94b04d]" name="testPostData" is-config="true" duration-ms="11843" started-at="2020-02-05T05:35:49Z" finished-at="2020-02-05T05:36:01Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testQueryPara -->
-      </class> <!-- com.api.rest.api.restassuredtest.TestQueryParameter -->
+        </test-method> <!-- testPostData -->
+        <test-method status="PASS" signature="testGet()[pri:1, instance:com.api.rest.api.restassuredtest.GetMethodTest@5b94b04d]" name="testGet" duration-ms="159" started-at="2020-02-05T05:36:01Z" finished-at="2020-02-05T05:36:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGet -->
+      </class> <!-- com.api.rest.api.restassuredtest.GetMethodTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

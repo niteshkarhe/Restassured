@@ -35,7 +35,7 @@ public class DeleteRequest
 		{
 			response = client.execute(delete);
 			ResponseHandler<String> handler = new BasicResponseHandler();
-			RestResponse restResponse=new RestResponse(response.getStatusLine().getStatusCode(), handler.handleResponse(response));
+			RestResponse restResponse=new RestResponse(response.getStatusLine().getStatusCode(), handler.handleResponse(response), response);
 			System.out.println(restResponse.toString());
 		}
 		catch(Exception e)
@@ -56,7 +56,7 @@ public class DeleteRequest
 		{
 			response = client.execute(delete);
 			ResponseHandler<String> body = new BasicResponseHandler();
-			RestResponse restResponse=new RestResponse(response.getStatusLine().getStatusCode(), body.handleResponse(response));
+			RestResponse restResponse=new RestResponse(response.getStatusLine().getStatusCode(), body.handleResponse(response), response);
 			System.out.println("Response code: "+restResponse.getStatusCode());
 			System.out.println("Response body: "+restResponse.getResponseBody());
 		}

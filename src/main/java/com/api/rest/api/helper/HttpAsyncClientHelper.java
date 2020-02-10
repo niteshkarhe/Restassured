@@ -106,7 +106,7 @@ public class HttpAsyncClientHelper
 			client.start(); //If not started it will throw exception: I/O Reactr status: INACTIE
 			response=client.execute(method, new RequestStatus());
 			ResponseHandler<String> handler=new BasicResponseHandler();
-			return new RestResponse(response.get().getStatusLine().getStatusCode(), handler.handleResponse(response.get()));
+			return new RestResponse(response.get().getStatusLine().getStatusCode(), handler.handleResponse(response.get()), null);
 		}
 		catch(Exception e)
 		{
@@ -114,7 +114,7 @@ public class HttpAsyncClientHelper
 			{
 				try 
 				{
-					return new RestResponse(response.get().getStatusLine().getStatusCode(), e.getMessage());
+					return new RestResponse(response.get().getStatusLine().getStatusCode(), e.getMessage(), null);
 				} 
 				catch (InterruptedException | ExecutionException e1) 
 				{
